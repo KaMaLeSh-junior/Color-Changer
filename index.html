@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Color Changer</title>
+    <style>
+        .colorChanger{
+            padding: 10px;
+            font-size: 20px;
+            font-weight: 600;
+            border: 1px solid black;
+            outline: none;
+            border-radius: 50px;
+        }
+        .colorChanger:hover{
+            background-color: rgba(202, 225,200, 1);
+        }
+
+        .colorChanger:active{
+            animation: runbg 2s infinite forwards ;
+            border: none;
+            transform: translateX(0);
+        }
+
+        @keyframes runbg{
+            0%{
+                background-color: yellow;
+                color: lightcoral;
+            }
+            25%{
+                background-color: lightcoral;
+                color: lightskyblue;
+            }
+            50%{
+                background-color: lightskyblue;
+                color: maroon;
+            }
+            75%{
+                background-color: maroon;
+                color: midnightblue;
+            }
+            100%{
+                background-color: midnightblue;
+                color: yellow;
+            }
+        }
+
+        h4{
+            top: 10px;
+            width: 325px;
+            height: 30px;
+            padding: 10px 10px;
+            border: 1px solid black;
+            text-align: left;
+            position: absolute;
+            top:150px;
+            left: 40%;
+            margin: auto;
+            font-size: 30px;
+            background-color: white;
+        }
+
+        .rbgColor{
+            padding: 10px;
+            font-size: 16px;
+            font-weight: 800;
+            border-radius: 20px;
+            outline: none;
+        }
+
+        
+
+        
+        div{
+            position: absolute;
+            top:40%;
+            left:25%;
+            display:flex;
+            width: 800px;
+            flex-direction: row;
+            justify-content: space-around;
+            
+        }
+    </style>
+</head>
+<body>
+    <h4 class="rgbcolor">RGB Color:&nbsp;&nbsp;<span class="inputrgb"></span></h4>
+
+    <div>
+
+    <button class="rbgColor" onclick="changeToRbg()">RGB COLOR</button>
+
+    <button class ="colorChanger" onclick="colorChange()">Change the Normal Color</button>
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>
